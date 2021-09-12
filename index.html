@@ -5,10 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <script defer src="./app.js"></script>
     <title>뱅킹</title>
   </head>
-
   <body>
     <section class="home">
       <header class="misc">
@@ -33,16 +39,22 @@
             </button>
             <button class="btn_account_transfer" type="button">이체</button>
           </div>
-          <h2 class="amount_used"><strong>1,240,000</strong>원</h2>
+          <span class="amount_used">1,240,000원</span>
           <!-- <div>막대그래프</div> -->
+          <div class="progress_wraper">
+            <div class="progress_bar">
+              <span class="red_bar"></span>
+              <!-- <div class="graph"> -->
+              <!-- <img class="graph" src="./assets/icons/Vector.svg" alt="" /> -->
+              <!-- </div> -->
+            </div>
+            <img class="graph" src="./assets/icons/Vector.svg" alt="" />
+          </div>
           <p class="budget">5일동안 <strong>210,000</strong>원 남음</p>
         </section>
-
         <div class="loan">
-          <strong class="loan_message">
-            지금 낮은 이자로 생활대출을 신청하세요!
-          </strong>
-          <button class="btn_loan" type="button">Go!</button>
+          <strong> 지금 낮은 이자로 생활대출을 신청하세요! </strong>
+          <button type="button">Go!</button>
         </div>
 
         <section class="account_description">
