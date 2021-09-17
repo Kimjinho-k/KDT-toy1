@@ -180,13 +180,13 @@ header.misc h1 {
 
 }
 
-.home .loan>strong {
+.home .loan > strong {
    font-size: 14px;
    font-weight: 500;
    line-height: 21px;
 }
 
-.home .loan>button {
+.home .loan > button {
    margin-left: 6px;
    border-bottom: 1px solid black;
    padding: 0;
@@ -195,16 +195,318 @@ header.misc h1 {
 
 /* Account Description */
 .account_description {
+   position: relative;
+   /* display: block; */
+   padding: 25px 40px 50px;
+   width:  295px;
+   height: 383px;
    background-color: var(--light-gray);
-   border-top-left-radius: 30px;
-   border-top-right-radius: 30px;
+   border-radius: 30px 30px 0px 0px;
+   box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
+   overflow: auto;
+}
+.account_description::-webkit-scrollbar {
+   display: none;
+}
+.account_description .drag {
+   position: absolute;
+   top: 4.3px;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 48px;
+   height: 2.15px;
+   background-color: #c4c4c4;
+   cursor: pointer;
+ }
+ .account_description .saving_hidden {
+   /* display: flex; */
+   width: 100%;
+   overflow: auto;
+   /* -ms-overflow-style: none; */
+   scrollbar-width: none;
+   margin-bottom: 17px;
+ }
+ .saving_hidden::-webkit-scrollbar {
+   display: none;
+ }
+.account_description .saving {
+   display: flex;
+   width: 490px;
+   /* overflow-x: auto; */
+}
+.account_description .saving_bar {
+   width: 162px;
+   height: 47px;
+   /* margin-right: 13px; */
+   border-radius: 6px;
+   background-color: #DADADA;
+   overflow: hidden;
+}
+.account_description .saving_bar.first {
+   width: 162px;
+   margin-right: 13px  
+}
+.account_description .saving_bar .bar_progress {
+   width: 56%;
+   /* height: 100%; */
+   font-size: 12px;
+   color: #FFFFFF;
+   padding: 5px 0 5px 13px;
+   line-height: 18px;
+ }
+
+ .account_description .saving_bar .bar_progress.orange {
+    background-color: #FF5F00;
+ }
+ .account_description .saving_bar .bar_progress.yellow {
+    background-color: #FEB700;
+ }
+ .add_saving {
+   display: inline-flex;
+   align-items: center;
+   width: auto;
+   height: 47px;
+   color: var(--red);
+   white-space: nowrap;
+ }
+ 
+ /* 사용 내역 */
+ .account_expenditual {
+   justify-content: space-between;
+   width: 100%;
+   line-height: 21px;
+ }
+ .account_expenditual .account_book_list .today span {
+   font-size: 14px;
+   font-weight: bold;
+   margin-right: 167px;
+ }
+ .account_expenditual .account_book_list .today strong {
+   font-size: 14px;
+   font-weight: 500;
+   color: #B4B4B4;
+ } 
+ .account_expenditual .account_book_list li {
+   display: flex;
+   justify-content: space-between;
+   padding: 8px 0;
+   border-bottom: 1px solid #DCDCDC;
+   color: #444444;
+   font-size: 18px;
+   position: relative;
+ }
+ .account_expenditual .account_book_list li > span{
+   font-weight: 350;    
+ }
+ .account_expenditual .account_book_list li > strong {
+   font-weight: 300; 
+   
+    /* position: absolute; */
+    
+    /* border: 1px solid darkblue; */
+ }
+ 
+ .account_expenditual .account_book_list .income {
+   color: #FF5F00;
+}
+ /* .description_item {
+   display: flex;
+   justify-content: space-between;
+   padding: 8px 0;
+   border-bottom: 1px solid #DCDCDC;
+   font-weight: 350;
+ }
+ */
+
+/* 지출관리 부분 */
+.management {
+   position: relative;
+   padding: 77px 38px 0 30px;
+   max-width: 345px;
+   max-height: 590px;
+   background-color: #FFFFFF;
+   margin: 0 auto;
+   overflow: auto;
+ }
+ .management::-webkit-scrollbar {
+    display: none;
+ }
+ .management .btn_close {
+   position: absolute; 
+   padding: 0;
+   height: 21px;
+   top: 37px;
+   left: 370px;
+   font-size: 14px;
+   font-weight: 300;
+   line-height: 21px;
+   letter-spacing: -0.24px;
+ }
+ .management .management_title {
+   font-size: 24px;
+   font-weight: 500;
+   line-height: 36px;
+   display: block;
+   margin-bottom: 33px;
+   letter-spacing: -0.24px;
+ }
+ .management .limit .limit_info {
+   display: flex;
+   /* align-items: center; */
+ }
+ .management .limit .limit_info h2 {
+   font-size: 18px;
+   font-weight: 500;
+   line-height: 27px;
+   letter-spacing: -0.24px;
+ }
+ .management .limit .limit_info strong {
+   color: #FF5F00;
+   font-size: 24px;
+   font-weight: 500;
+   /* line-height: 36px; */
+   margin: 0 0 34px 114.5px;
+ }
+
+ /* Expenditure graph */
+ .limit_graphic .progress_wraper {
+   /* max-width: 338px; */
+   width: 100%;
+   /* display: flex; */
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 67.12px;
+}
+
+.limit_graphic .progress_wraper .progress_bar {
+   max-width: 343px;
+   width: 100%;
+   height: 6px;
+   border-radius: 3px;
+   background-color: #C4C4C4;
+   position: relative;
+   
+}
+
+.limit_graphic .progress_wraper .progress_bar::before {
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 67%;
+   border-top-left-radius: 3px;
+   border-bottom-left-radius: 3px;
+   background-color: #FFDB4C;
+}
+
+.limit_graphic .progress_wraper .progress_bar .red_bar {
+   width: 8px;
+   height: 28px;
+   background-color: #FF5F00;
+   position: absolute;
+   left: 75%;
+   top: -185%;
+   border: 2px solid #ffffff;
+   border-radius: 4px;
+}
+.management .daily_report h2 {
+   font-size: 18px;
+   font-weight: 500;
+   line-height: 27px;
+   letter-spacing: -0.24px;
+}
+.management .daily_report {
+   overflow: auto;
+   margin-bottom: 46px;
+}
+.management .daily_report::-webkit-scrollbar {
+   display: none;
+}
+.management .month_pattern {
+   position: relative;
+}
+.management .month_pattern h2 {
+   font-size: 18px;
+   font-weight: 500;
+   line-height: 27px;
+   letter-spacing: -0.24px;
+   margin-bottom: 18px;
+}
+
+.management .month_pattern .management_chart2 {
+   margin: 0, auto;
+   width: 100%;
+   margin-bottom: 18px;
+}
+.management .month_pattern .money {
+   /* border: 1px solid red; */
+   font-size: 24px;
+   font-weight: 500;
+   line-height: 21px;
+   letter-spacing: -0.24px;
+   position: absolute;
+   top: 220px;
+   left: 105px;
+}
+.category_list {
+   padding-left: 54px;
+   position: relative;
+   
+}
+.category_list .category_item {
+   align-items: center;
+}
+.category_list .category_item .fas {
+   position: absolute;
+   margin-right: 10px;
+   left: 5px;
+}
+.category_list .category_item .fas.fa-car {
+   font-size: 28px;
+   color: #DB3069;
+   line-height: 32px
+}
+.category_item .fas.fa-dumbbell {
+   font-size: 24px;
+   color: #F58F29;
+}
+.category_item .fas.fa-utensils {
+   font-size: 24px;
+   left: 9px;
+   color: #FF4B3E;
+}
+.category_item .fas.fa-shopping-basket {
+   font-size: 24px;
+   color: #235789;
+}
+.category_item .fas.fa-store {
+   font-size: 24px;
+   color: #9BC53D;
+}
+.category_list .category_item .wrap {
+   display: flex;
+   justify-content: space-between;
+}
+.category_list .category_item {
+   margin-bottom: 21px;
+}
+.category_list .category_item .wrap .category_title {
+   font-size: 18px;
+   font-weight: 350;
+   line-height: 27px;
+   letter-spacing: -0.24px;
+}
+.category_list .category_item .wrap .category_price {
+   color: #858585;
+   font-size: 18px;
+   font-weight: 350;
+   letter-spacing: -0.24px; 
 }
 
 /* Footer */
 .global-footer-menu {
    height: 76px;
    background: linear-gradient(163.63deg, #00BDB2 11.35%, #C4E7B8 139.96%);
-   max-width: 375px;
+   max-width: 415px;
    margin: 0 auto;
    display: flex;
 }
