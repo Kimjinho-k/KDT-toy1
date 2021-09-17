@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>뱅킹</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script defer type="text/javascript" src="./app.js"></script>
+    <style>
+       html {
+          background-color: #DADADA;
+       }
+    </style>
+</head>
+<body>
+   <section class="management">
+      <button class="btn_close">닫기</button>
+      <div class="management_title">
+        <h1>지출 관리</h1>
+      </div>
+      <div class="limit">
+        <div class="limit_info">
+          <h2>기준금액설정 </h2><strong>2,100,000원</strong>
+        </div>
+        <div class="limit_graphic">
+          <!--js로 처리되는 그래픽 요소?-->
+          <div class="progress_wraper">
+            <div class="progress_bar">
+              <span class="red_bar"></span>      
+            </div>
+        </div>
+      </div>
+      <div class="daily_report">
+        <h2>일간 리포트</h2>
+        <canvas class="da_re" id="myChart" width="400" ></canvas>
+      </div>
+      <div class="month_pattern">
+        <h2>6월 지출 패턴</h2>
+        <span class="money">1,736,500원
+        </span>
+        <canvas class="management_chart2" id="management_chart2"></canvas>
+      </div>
+      <ul class="category_list">
+         <li class="category_item" >
+          <i class="fas fa-car"></i>
+          <div class="wrap">
+          <span class="category_title">주유비</span>
+          <span class="category_price">56,000원</span>
+         </div>
+        </li>
+        <li class="category_item" >
+         <i class="fas fa-dumbbell"></i>
+          <div class="wrap">
+          <h2 class="category_title">건강관리비</h2>
+          <h2 class="category_price">80,000원</h2>
+         </div>
+        </li>
+        <li class="category_item" >
+         <i class="fas fa-utensils"></i>
+         <div class="wrap">
+          <h2 class="category_title">외식비</h2>
+          <h2 class="category_price">233,000원</h2>
+         </div>
+        </li>
+        <li class="category_item" >
+         <i class="fas fa-shopping-basket"></i>
+          <div class="wrap">
+          <h2 class="category_title">장보기</h2>
+          <h2 class="category_price">390,000원</h2>
+         </div>
+        </li>
+        <li class="category_item" >
+         <i class="fas fa-store"></i>
+         <div class="wrap">
+          <h2 class="category_title">상점</h2>
+          <h2 class="category_price">46,000원</h2>
+         </div>
+        </li>
+      </ul>
+    </section>
+    
+        <footer class="global-footer-menu">
+          <ul class="menu-list">
+            <li class="menu-item">
+              <button class="btn_menu" type="button">
+                <img src="./assets/icons/house.svg" alt="홈 화면으로 가기 버튼" />
+              </button>
+            </li>
+            <li class="menu-item">
+              <button class="btn_menu" type="button">
+                <img src="./assets/icons/arrows.svg" alt="이동" />
+              </button>
+            </li>
+            <li class="menu-item">
+              <button class="btn_menu" type="button">
+                <img src="./assets/icons/skypeMessage.svg" alt="채팅하기" />
+              </button>
+            </li>
+            <li class="menu-item">
+              <button class="btn_menu" type="button">
+                <img src="./assets/icons/more.svg" alt="눌러서 메뉴 열기" />
+              </button>
+            </li>
+          </ul>
+        </footer>
+      </body>
+    </html>
+</body>
+</html>
