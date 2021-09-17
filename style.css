@@ -503,6 +503,19 @@ header.misc h1 {
 }
 
 /* Footer */
+.index_global-footer-menu{
+   height: 76px;
+   background: linear-gradient(163.63deg, #00BDB2 11.35%, #C4E7B8 139.96%);
+   max-width: 375px;
+   margin: 0 auto;
+   display: flex;
+}
+.index_global-footer-menu ul {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   width: 100%;
+}
 .global-footer-menu {
    height: 76px;
    background: linear-gradient(163.63deg, #00BDB2 11.35%, #C4E7B8 139.96%);
